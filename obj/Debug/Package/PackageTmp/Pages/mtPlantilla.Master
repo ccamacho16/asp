@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mtPlantilla.master.cs" Inherits="SGCC.Pages.mtPlantilla" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title></title>
+
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1"  runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    SGCC
+                    <asp:Label ID="Label2" runat="server"></asp:Label>
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <%-- <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Pages/pgLogin.aspx" ID="HeadLoginStatus" runat="server">Iniciar sesión</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Pantalla de bienvenida <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesión" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>--%>
+                <asp:Label ID="Label1" runat="server"></asp:Label>
+                <br />
+                <asp:LinkButton ID="LinkButton1" runat="server" 
+                    PostBackUrl="~/Pages/pgLogin.aspx" onclick="LinkButton1_Click">cerrar sesion</asp:LinkButton>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Pages/pgPrincipal.aspx" Text="Inicio" tooltip="Inicio"/>                            
+                        <asp:MenuItem Text="Entidad">
+                            <asp:MenuItem NavigateUrl="~/Pages/pgClientes.aspx" Text="Clientes"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgGarantes.aspx" Text="Garantes"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgOfiCredito.aspx" Text="OficialCredito"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgUsuarios.aspx" Text="Usuarios"/>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Procesos">
+                            <asp:MenuItem NavigateUrl="~/Pages/pgSimulacion.aspx" Text="Simulacion"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgCredito.aspx" Text="Credito"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgCreditosAlternos.aspx" Text="Creditos Alternos"/>
+                            
+                        </asp:MenuItem>   
+
+                        <asp:MenuItem Text="Transacciones">
+                            
+                            <asp:MenuItem NavigateUrl="~/Pages/pgCobranzas.aspx" Text="Cobranzas"/>         
+                            <asp:MenuItem NavigateUrl="~/Pages/pgDesembolsos.aspx" Text="Desembolsos"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgDesembolsosRefinan.aspx" Text="Desembolsos Refinan."/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgRegistrarIngresos.aspx" Text="Registrar Ingresos"></asp:MenuItem>                                  
+                            <asp:MenuItem NavigateUrl="~/Pages/pgRegistrarEgresos.aspx" Text="Registrar Egresos"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgAbonoCapital.aspx" Text="Abono a Capital"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgAbonoInteres.aspx" Text="Abono a Interes"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgCaja.aspx" Text="Caja"/> 
+
+                            
+                        </asp:MenuItem>      
+                                            
+                        <asp:MenuItem Text="Administrar">
+                            <asp:MenuItem NavigateUrl="~/Pages/pgAnularCredito.aspx" Text="AnularCredito"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgCastigarCliente.aspx" Text="Castigar Cliente"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgReimprimirPlanPago.aspx" Text="Reimprimir Plan Pago"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgInyectarCapital.aspx" Text="Inyectar Capital"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgConfiguracion.aspx" Text="Config. Parametros"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgBackup.aspx" Text="Backup Datos"/>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Reportes">       
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpDatosCredito.aspx" Text="Imprimir Credito"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpConsultaEstadoCredito.aspx" Text="Extracto de Credito"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpConsultaMoraHistorico.aspx" Text="Historico Credito-Mora"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpConsultaMoraClientes.aspx" Text="Clientes en Mora"/>  
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpConsultaMoraCastigados.aspx" Text="Clientes Castigados"/>                                                                                                                               
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpPagosRangoFecha.aspx" Text="Pagos Realizados"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpPagosProgFecha.aspx" Text="Pagos Programados"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpExtractoPagos.aspx" Text="Extracto Pagos Cred."/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpPorcentajePagosCred.aspx" Text="Porcentaje Pagos Cred."/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpDesembolsoRangoFecha.aspx" Text="Desembolsos"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpDesembolsoOficialCre.aspx" Text="Desembolsos x Ofi. Credito"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpDesembolsoPendientes.aspx" Text="Desembolsos Pendientes"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpOtrosIngresosEgresos.aspx" Text="Otros Ingresos-Egresos"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpLibroDiario.aspx" Text="Libro Diario"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpFlujoCaja.aspx" Text="Flujo de Caja"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpConsultaCaja.aspx" Text="Caja"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpSaldoCapital.aspx" Text="Saldo Capital"/>
+                            <asp:MenuItem NavigateUrl="~/Pages/pgpDetalleCreditosCSV.aspx" Text="Detalle de Creditos [CSV]"/>
+
+                        </asp:MenuItem>                        
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+
+    <%--
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>--%>
+</body>
+</html>

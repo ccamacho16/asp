@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsPlanPagosSimulacion" targetNamespace="http://tempuri.org/dsPlanPagosSimulacion.xsd" xmlns:mstns="http://tempuri.org/dsPlanPagosSimulacion.xsd" xmlns="http://tempuri.org/dsPlanPagosSimulacion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsPlanPagosSimulacion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsPlanPagosSimulacion" msprop:Generator_UserDSName="dsPlanPagosSimulacion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblPlanPagosSimulacion" msprop:Generator_TableClassName="tblPlanPagosSimulacionDataTable" msprop:Generator_TableVarName="tabletblPlanPagosSimulacion" msprop:Generator_TablePropName="tblPlanPagosSimulacion" msprop:Generator_RowDeletingName="tblPlanPagosSimulacionRowDeleting" msprop:Generator_RowChangingName="tblPlanPagosSimulacionRowChanging" msprop:Generator_RowEvHandlerName="tblPlanPagosSimulacionRowChangeEventHandler" msprop:Generator_RowDeletedName="tblPlanPagosSimulacionRowDeleted" msprop:Generator_UserTableName="tblPlanPagosSimulacion" msprop:Generator_RowChangedName="tblPlanPagosSimulacionRowChanged" msprop:Generator_RowEvArgName="tblPlanPagosSimulacionRowChangeEvent" msprop:Generator_RowClassName="tblPlanPagosSimulacionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nro" msprop:Generator_ColumnVarNameInTable="columnNro" msprop:Generator_ColumnPropNameInRow="Nro" msprop:Generator_ColumnPropNameInTable="NroColumn" msprop:Generator_UserColumnName="Nro" type="xs:int" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:string" minOccurs="0" />
+              <xs:element name="Capital" msprop:Generator_ColumnVarNameInTable="columnCapital" msprop:Generator_ColumnPropNameInRow="Capital" msprop:Generator_ColumnPropNameInTable="CapitalColumn" msprop:Generator_UserColumnName="Capital" type="xs:int" minOccurs="0" />
+              <xs:element name="Interes" msprop:Generator_ColumnVarNameInTable="columnInteres" msprop:Generator_ColumnPropNameInRow="Interes" msprop:Generator_ColumnPropNameInTable="InteresColumn" msprop:Generator_UserColumnName="Interes" type="xs:int" minOccurs="0" />
+              <xs:element name="SaldoCapital" msprop:Generator_ColumnVarNameInTable="columnSaldoCapital" msprop:Generator_ColumnPropNameInRow="SaldoCapital" msprop:Generator_ColumnPropNameInTable="SaldoCapitalColumn" msprop:Generator_UserColumnName="SaldoCapital" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalBs" msprop:Generator_ColumnVarNameInTable="columnTotalBs" msprop:Generator_ColumnPropNameInRow="TotalBs" msprop:Generator_ColumnPropNameInTable="TotalBsColumn" msprop:Generator_UserColumnName="TotalBs" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

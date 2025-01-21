@@ -1,0 +1,9 @@
+C:\Unidad D\Proyectos\SGCC\SGCC\SGCC\bin\SGCC.dll
+C:\Unidad D\Proyectos\SGCC\SGCC\SGCC\bin\SGCC.pdb
+C:\Unidad D\Proyectos\SGCC\SGCC\SGCC\obj\Debug\SGCC.dll
+C:\Unidad D\Proyectos\SGCC\SGCC\SGCC\obj\Debug\SGCC.pdb
+D:\Proyectos\SGCC\SGCC\bin\SGCC.dll
+D:\Proyectos\SGCC\SGCC\bin\SGCC.pdb
+D:\Proyectos\SGCC\SGCC\obj\Debug\SGCC.csprojResolveAssemblyReference.cache
+D:\Proyectos\SGCC\SGCC\obj\Debug\SGCC.dll
+D:\Proyectos\SGCC\SGCC\obj\Debug\SGCC.pdb
